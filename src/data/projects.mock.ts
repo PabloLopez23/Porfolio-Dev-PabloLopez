@@ -13,7 +13,7 @@ export const mockProjects: Project[] = [
     title: 'BEST MOVIE TRAILERS',
     description: 'Aplicación Web de trailers de películas desarrollada con React, donde puedes explorar y consultar información de trailers de películas más actuales y populares. Utilizando la API externa de Themoviedb.',
     skills: ["TypeScript","React","bootstrap","git","Axios", "Api", "Node.js"],
-    urlImage: '/public/img2.png', 
+    urlImage: 'https://drive.google.com/file/d/182NtT9o9VC3Kfk-kCvNTz0RcfSginvdu/view?usp=sharing', 
     urlRepository: 'https://github.com/PabloLopez23/Best-Movie-Trailers',
     urlDeploy: 'https://moonlit-syrniki-83ced5.netlify.app/'
   },
