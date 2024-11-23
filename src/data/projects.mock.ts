@@ -23,7 +23,7 @@ export const mockProjects: Project[] = [
     urlImage: '/public/img3.png', 
     skills: ["Node.js","TypeScript","React","Redux","TailwindCSS",],
     urlRepository: 'https://github.com/Heba-WebDev/barbershop',
-    urlDeploy: 'https://github.com/Heba-WebDev/barbershop',
+    urlDeploy: 'https://drive.google.com/file/d/1H1S3dTU0ZS_Fl6zovThnI_87PoGG_NbX/view?usp=sharing',
   },
   {
     title: 'SEARCHER GITHUB',
@@ -32,5 +32,13 @@ export const mockProjects: Project[] = [
     skills: ["React","TypeScript","CSS","Axios","Api",],
     urlRepository: 'https://github.com/PabloLopez23/Searcher_GitHub',
     urlDeploy: 'https://searcher-git-hub.vercel.app/',
+  },
+  {
+    title: 'PORFOLIO DEV',
+    urlImage: '/public/28.jpeg',
+    description: 'He creado una aplicación de portafolio usando Astro, JavaScript, TypeScript, TailwindCSS, Axios y Node.js. La aplicación es responsiva, incluye una sección de proyectos con detalles y enlaces, .',
+    skills: ["Astro","Javascript","TypeScript","TailwindCSS","Axios","Node.js",],
+    urlRepository: 'https://github.com/PabloLopez23/Porfolio-Dev-PabloLopez',
+    urlDeploy: '',
   }
 ]
