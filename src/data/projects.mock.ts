@@ -36,9 +36,9 @@ export const mockProjects: Project[] = [
   {
     title: 'PORFOLIO DEV',
     urlImage: '/public/28.jpeg',
-    description: 'He creado una aplicación de portafolio usando Astro, JavaScript, TypeScript, TailwindCSS, Axios y Node.js. La aplicación es responsiva, incluye una sección de proyectos con detalles y enlaces, .',
+    description: 'Aplicación de portafolio usando Astro, JavaScript, TypeScript, TailwindCSS, etc. La aplicación es responsiva, incluye una sección de proyectos con detalles y enlaces.',
     skills: ["Astro","Javascript","TypeScript","TailwindCSS","Axios","Node.js",],
     urlRepository: 'https://github.com/PabloLopez23/Porfolio-Dev-PabloLopez',
-    urlDeploy: '',
+    urlDeploy: 'https://github.com/PabloLopez23/Porfolio-Dev-PabloLopez',
   }
 ]
