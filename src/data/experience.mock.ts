@@ -8,7 +8,7 @@ export const mockExperience: TimeLineData[] = [
     extraDetails: [
       {
         title: 'BarberHub ',
-        description: 'Participé en la Simulación Laboral Tech, cuyo objetivo era crear una aplicación Web desde cero en equipos interdisciplinarios. Mi rol fue el de Desarrollador de Software, lo que me permitió colaborar en la elección del proyecto, la planificación y creación del mismo asumiendo la responsabilidad de la presentación final. Utilizamos tecnologías como React y Node.js, entre otras.',
+        description: 'Simulación Laboral Tech donde creamos aplicaciones web desde cero en equipos interdisciplinarios. Como Desarrollador de Software, me permite colaborar en la elección del proyecto, la planificación y creacion del mismo.',
         url: 'https://www.linkedin.com/feed/update/urn:li:activity:7208504650159816704/'
       }
       
@@ -20,7 +20,7 @@ export const mockExperience: TimeLineData[] = [
     date: 'Abr 2023 - Sep 2023',
     extraDetails: [
       {
-        description: 'Bootcamp de Programacion donde adquiri experiencia trabajando Full Time en equipo gracias a Pair Programing un espacio donde imita un entorno de trabajo real. Se realiza de manera remota usando herramientas colaborativas como: Slack, Zoom, Meet, Notion, Discord, etc.'
+        description: 'Bootcamp de Programación donde adquirí experiencia trabajando full time con compañeros en equipo gracias al Pair Programming. Este espacio imita un entorno de trabajo real y se realiza de manera remota utilizando herramientas colaborativas como Slack, Zoom, Meet, Notion y Discord.'
       }
     ],
   }
