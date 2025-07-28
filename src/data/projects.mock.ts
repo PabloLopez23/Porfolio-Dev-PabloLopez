@@ -34,7 +34,7 @@ export const mockProjects: Project[] = [
     urlDeploy: 'https://pablolopezporfolio.netlify.app/',
   },
   {
-    title: 'BARBERHUB',
+    title: 'BARBERSHOP',
     description: 'En colaboración con un equipo internacional, participé en el desarrollo de una aplicación web para barbería. Nuestro objetivo fue crear una plataforma intuitiva y funcional que permitiera a los usuarios reservar citas, consultar servicios disponibles y obtener información sobre los barberos.',
     urlImage: 'https://res.cloudinary.com/dxakaoudm/image/upload/v1732390027/img2_ghgatr.jpg', 
     skills: ["Node.js","TypeScript","React","Redux","TailwindCSS","Responsive Web Design"],

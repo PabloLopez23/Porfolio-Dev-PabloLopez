@@ -4,7 +4,7 @@ export const mockEducation: TimeLineData[] = [
   {
     subTitle: { title: "Diploma - Enlace", url: "https://platzi.com/p/pabloexelh22/ruta/100-javascript-full-stack/diploma/detalle/"},
     date: "PLATZI - 2023",
-    title: "Desarrollador de software",
+    title: "Desarrollador de Software",
   },
   {
     subTitle: { title: "Diploma - Enlace", url: "https://platzi.com/p/pabloexelh22/ruta/38-seguridad-informatica-old/diploma/detalle/"},
