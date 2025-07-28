@@ -2,25 +2,25 @@ import {type TimeLineData } from "@ui/TimeLine/time-line.interface";
 
 export const mockExperience: TimeLineData[] = [
   {
-    title: 'Software Developer',
+    title: 'Desarrollador de Software',
     subTitle: { title: 'NO COUNTRY - Enlace', url: 'https://www.nocountry.tech/simulacion-laboral'},
     date: 'May 2024 - Nov 2024',
     extraDetails: [
       {
         title: 'BarberHub ',
-        description: 'Simulación Laboral Tech donde creamos aplicaciones web desde cero en equipos interdisciplinarios. Como Desarrollador de Software, me permite colaborar en la elección del proyecto, la planificación y creacion del mismo.',
+        description: 'Simulación Laboral Tech en la que desarrollamos aplicaciones web desde cero en equipos interdisciplinarios. Como Desarrollador de Software, tuve la oportunidad de participar en la selección del proyecto, su planificación y su desarrollo.',
         url: 'https://www.linkedin.com/feed/update/urn:li:activity:7208504650159816704/'
       }
       
     ],
   },
   {
-    title: 'Software Developer',
+    title: 'Desarrollador de Software',
     subTitle: { title: 'HENRY - Enlace', url: 'https://www.soyhenry.com/'},
     date: 'Abr 2023 - Sep 2023',
     extraDetails: [
       {
-        description: 'Bootcamp de Programación donde adquirí experiencia trabajando full time con compañeros en equipo gracias al Pair Programming. Este espacio imita un entorno de trabajo real y se realiza de manera remota utilizando herramientas colaborativas como Slack, Zoom, Meet, Notion y Discord.'
+        description: 'Bootcamp de Programación en el que adquirí experiencia trabajando a tiempo completo en equipo mediante Pair Programming. Este espacio simula un entorno laboral real y se lleva a cabo de forma remota utilizando herramientas colaborativas como Slack, Zoom, Meet, Notion y Discord.'
       }
     ],
   }
