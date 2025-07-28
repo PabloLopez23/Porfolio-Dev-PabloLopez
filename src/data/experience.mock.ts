@@ -4,7 +4,7 @@ export const mockExperience: TimeLineData[] = [
   {
     title: 'Desarrollador de Software',
     subTitle: { title: 'NO COUNTRY - Enlace', url: 'https://www.nocountry.tech/simulacion-laboral'},
-    date: 'May 2024 - Nov 2024',
+    date: '2024',
     extraDetails: [
       {
         title: 'BarberHub ',
@@ -17,7 +17,7 @@ export const mockExperience: TimeLineData[] = [
   {
     title: 'Desarrollador de Software',
     subTitle: { title: 'HENRY - Enlace', url: 'https://www.soyhenry.com/'},
-    date: 'Abr 2023 - Sep 2023',
+    date: '2023',
     extraDetails: [
       {
         description: 'Bootcamp de Programación en el que adquirí experiencia trabajando a tiempo completo en equipo mediante Pair Programming. Este espacio simula un entorno laboral real y se lleva a cabo de forma remota utilizando herramientas colaborativas como Slack, Zoom, Meet, Notion y Discord.'
