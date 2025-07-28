@@ -3,11 +3,11 @@ import {type TimeLineData } from "@ui/TimeLine/time-line.interface";
 export const mockExperience: TimeLineData[] = [
   {
     title: 'Desarrollador de Software',
-    subTitle: { title: 'NO COUNTRY - Enlace', url: 'https://www.nocountry.tech/simulacion-laboral'},
+    subTitle: { title: 'NO COUNTRY - Enlace', url: 'https://www.linkedin.com/company/nocountrytalent/posts/?feedView=all'},
     date: '2024',
     extraDetails: [
       {
-        title: 'BarberHub ',
+        title: 'BarberShop ',
         description: 'Simulación Laboral Tech en la que desarrollamos aplicaciones web desde cero en equipos interdisciplinarios. Como Desarrollador de Software, tuve la oportunidad de participar en la selección del proyecto, su planificación y su desarrollo.',
         url: 'https://www.linkedin.com/feed/update/urn:li:activity:7208504650159816704/'
       }
@@ -16,7 +16,7 @@ export const mockExperience: TimeLineData[] = [
   },
   {
     title: 'Desarrollador de Software',
-    subTitle: { title: 'HENRY - Enlace', url: 'https://www.soyhenry.com/'},
+    subTitle: { title: 'HENRY - Enlace', url: 'https://www.linkedin.com/school/henryok/posts/?feedView=all'},
     date: '2023',
     extraDetails: [
       {
