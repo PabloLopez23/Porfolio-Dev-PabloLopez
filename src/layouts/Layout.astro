@@ -49,13 +49,13 @@ const { description, author, url, keywords, image } = metadata;
   </head>
   <body>
     <slot />
-    <ThemeToggle client:load />
+    <ThemeToggle />
   </body>
 </html>
 
 <style is:global>
   body {
-    @apply bg-white font-mono text-black; /* Light mode: Fondo blanco, fuente monoespaciada y texto negro */
+    @apply bg-white font-mono text-red-500; /* Light mode: Fondo blanco, fuente monoespaciada y texto rojo */
   }
 
   .dark body {
@@ -63,7 +63,7 @@ const { description, author, url, keywords, image } = metadata;
   }
 
   h1, h2, h3 {
-    @apply text-2xl font-semibold text-black;
+    @apply text-2xl font-semibold text-red-500;
   }
 
   .dark h1, .dark h2, .dark h3 {
@@ -71,7 +71,7 @@ const { description, author, url, keywords, image } = metadata;
   }
 
   h4 {
-    @apply text-base font-semibold text-black;
+    @apply text-base font-semibold text-red-500;
   }
 
   .dark h4 {
@@ -79,7 +79,7 @@ const { description, author, url, keywords, image } = metadata;
   }
 
   p {
-    @apply text-black;
+    @apply text-red-500;
   }
 
   .dark p {
