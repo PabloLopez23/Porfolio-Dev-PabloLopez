@@ -9,21 +9,30 @@ import CardProject from "@ui/CardProject/CardProject.astro";
 ---
 
 <section
-  class="bg-secondary rounded-2xl p-8 flex flex-col gap-6 animate-pulse-fade-in animate-duration-500 animate-delay-300"
+  id="projects"
+  class="portfolio-section animate-pulse-fade-in animate-duration-500 animate-delay-300"
 >
-  <div class="flex gap-4 items-center">
+  <div class="section-title-row">
     <Star />
-    <h2>PROYECTOS</h2>
+    <h2>Proyectos</h2>
   </div>
 
-  <div class="grid sm:grid-cols-2 gap-3">
+  <div class="card-list">
     {mockProjects.map((project) => <CardProject project={project} />)}
   </div>
 
   <ButtonLink href="https://github.com/PabloLopez23?tab=repositories">
-    Más proyectos
+    Mas proyectos
     <ArrowRight
       className="size-4 ml-0.5 opacity-70 group-hover:opacity-100 duration-200 group-hover:translate-x-[1.5px]"
     />
   </ButtonLink>
 </section>
+
+<style>
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+    gap: 2rem;
+  }
+</style>

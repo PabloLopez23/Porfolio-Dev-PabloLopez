@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 import GitHub from "@icons/GitHub.astro";
 import CardButtonLink from "./CardButtonLink.astro";
 
@@ -18,43 +16,85 @@ const { description, skills, title, urlDeploy, urlImage, urlRepository } =
   project;
 ---
 
-<article
-  class="flex flex-col justify-between hover:bg-neutral-800/20 rounded-2xl p-4 hover:cursor-pointer"
->
-  <header>
+<article class="project-card">
+  <img src={urlImage} alt={`Captura de ${title}`} loading="lazy" width="400" height="200" />
+
+  <div class="project-content">
     <h3>{title}</h3>
     <p>{description}</p>
 
-    <div class="flex flex-wrap gap-2 pt-2 pb-3">
+    <div class="skill-list">
       {skills?.map((name) => <BadgeSkill>{name}</BadgeSkill>)}
     </div>
-  </header>
+  </div>
 
-  <footer class="flex flex-col gap-3">
-    <Image
-      height={160}
-      width={400}
-      class="rounded-xl h-40 object-cover object-top"
-      src={urlImage}
-      alt=""
-    />
+  <footer>
+    {
+      urlRepository && (
+        <CardButtonLink aria-label={`Ver repositorio de ${title}`} href={urlRepository}>
+          <GitHub className="size-4" />
+        </CardButtonLink>
+      )
+    }
 
-    <div class="flex items-center gap-2">
-      {
-        urlRepository && (
-          <CardButtonLink aria-label="Ver Repositorio" href={urlRepository}>
-            <GitHub className="size-4 text-neutral-50" />
-          </CardButtonLink>
-        )
-      }
-
-      {
-        urlDeploy && (
-          <CardButtonLink aria-label="Ver Deploy" href={urlDeploy}>
-            <ExternalLink className="size-4 text-neutral-50" />
-          </CardButtonLink>
-        )
-      }
-    </div>
+    {
+      urlDeploy && (
+        <CardButtonLink aria-label={`Ver deploy de ${title}`} href={urlDeploy}>
+          <ExternalLink className="size-4" />
+        </CardButtonLink>
+      )
+    }
   </footer>
 </article>
+
+<style>
+  .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--surface-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(15, 18, 28, 0.18);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .project-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.25rem;
+  }
+
+  footer {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+  }
+</style>

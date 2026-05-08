@@ -1,22 +1,14 @@
 ---
-import { Image } from "astro:assets";
-
-import BadgeWork from "@ui/BadgeWork.astro";
 import SocialButtonLinks from "@ui/SocialButtonLinks.astro";
-import ButtonLink from "@ui/ButtonLink.astro";
 
-import MailForward from "@icons/MailForward.astro";
-import FileExport from "@icons/FileExport.astro";
+const email = "pabloexelopezh@gmail.com";
 ---
 
 <script>
   import { copyTextToClipboard } from "../../utils/copy-text-to-clipboard.util.ts";
 
   document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector(
-      "#btn-copy-text"
-    ) as HTMLButtonElement;
-
+    const button = document.querySelector("#btn-copy-text") as HTMLButtonElement;
     const toast = document.getElementById("toast") as HTMLDivElement;
 
     button?.addEventListener("click", () => {
@@ -36,49 +28,156 @@ import FileExport from "@icons/FileExport.astro";
   });
 </script>
 
-<section
-  class="bg-secondary rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 animate-pulse-fade-in animate-duration-500"
->
-  <figure class="flex flex-shrink-0 bg-tertiary rounded-full">
-    <Image
-      height={200}
-      width={200}
-      class="h-48 w-48 object-cover translate-y-2 rounded-full" 
-      src="/mifoto.png"
-      alt="Foto de Pablo Lopez"
-    />
-  </figure>
+<section id="hero" class="animate-pulse-fade-in animate-duration-500">
+  <header class="hero-header">
+    <picture>
+      <img
+        src="https://picsum.photos/id/4/750/200"
+        alt="Banner tecnologico"
+        loading="lazy"
+        width="750"
+        height="200"
+      />
+    </picture>
+  </header>
 
-  <div class="flex flex-col gap-4">
-    <header class="flex flex-wrap gap-2 sm:gap-0 items-center justify-between">
-      <BadgeWork />
+  <picture class="hero-logo">
+    <img src="/mifoto.png" alt="Foto de Pablo Lopez" width="200" height="200" />
+  </picture>
+
+  <div class="hero-content">
+    <div class="hero-socials">
       <SocialButtonLinks />
-    </header>
-
-    <div class="space-y-1">
-      <h1>PABLO LÓPEZ</h1>
-      <p>
-        <strong class="text-green-200">Software Developer | Cybersecurity | Pentester</strong> <br/> <br/>
-        Desarrollador de software con formación en Frontend y Backend, actualmente especializándome en Ciberseguridad, con foco en Pentesting, Seguridad Web y Análisis de Vulnerabilidades.
-He realizado cursos prácticos en Ciberseguridad, donde trabajé con herramientas como Burp Suite, Nmap, Wireshark y Linux, además de estudiar conceptos como OWASP Top 10 y fundamentos de Redes.
-Mi experiencia en desarrollo con tecnologías como React y Node.js me permite entender la seguridad desde la construcción del Software. Busco oportunidad en el área, donde pueda aportar y seguir creciendo profesionalmente.
-      </p>
     </div>
 
+    <p class="eyebrow">Software Developer | Cybersecurity | Pentester</p>
+    <h1>Pablo Lopez</h1>
+    <p class="summary">
+      Desarrollador de software con formacion en Frontend y Backend, actualmente
+      especializandome en Ciberseguridad con foco en Pentesting, Seguridad Web y
+      Analisis de Vulnerabilidades. Trabajo con React, Node.js, TypeScript,
+      Linux, Burp Suite, Nmap y Wireshark para construir software entendiendo
+      tambien su superficie de seguridad.
+    </p>
 
-    <footer class="flex ml-auto gap-2">
-      <button
-        class="inline-flex items-center text-sm justify-center rounded-xl bg-neutral-800 p-2 text-neutral-50 opacity-80 transition-opacity duration-150 hover:opacity-100 group hover:cursor-pointer font-semibold gap-1"
-        id="btn-copy-text"
-      >
-        <MailForward />
-        EMAIL
-      </button>
-
-      <ButtonLink href="cv.pdf" role="link">
-        <FileExport className="mr-1" />
-        DESCARGAR CV
-      </ButtonLink>
-    </footer>
+    <div class="hero-actions">
+      <button id="btn-copy-text" class="primary-action" type="button">Email</button>
+      <a class="primary-action secondary" href="cv.pdf">Descargar CV</a>
+      <a class="primary-action secondary" href={`mailto:${email}`}>Contactarme</a>
+    </div>
   </div>
 </section>
+
+<style>
+  #hero {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "headerHero headerHero"
+      "pictureHero contentHero";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 33px;
+  }
+
+  .hero-header {
+    grid-area: headerHero;
+    width: 100%;
+  }
+
+  .hero-header picture {
+    display: block;
+    width: 100%;
+    aspect-ratio: 750 / 200;
+    overflow: hidden;
+    border-radius: 7px;
+    outline: 1px solid rgba(255, 255, 255, 0.24);
+  }
+
+  .hero-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .hero-logo {
+    grid-area: pictureHero;
+    width: 100%;
+    max-width: 200px;
+    margin-top: -30px;
+    overflow: hidden;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #5a5353;
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    grid-area: contentHero;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1rem;
+  }
+
+  .hero-socials {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .eyebrow {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  .summary {
+    max-width: 720px;
+    color: var(--text-color);
+    font-size: 1.08rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 0.35rem;
+  }
+
+  .secondary {
+    background: var(--secondary-color);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-logo {
+      margin-top: -42px;
+      max-width: 168px;
+    }
+
+    .hero-content {
+      align-items: center;
+    }
+
+    .hero-socials {
+      justify-content: center;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+  }
+</style>

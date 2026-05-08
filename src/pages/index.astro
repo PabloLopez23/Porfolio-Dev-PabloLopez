@@ -3,6 +3,7 @@ import About from "@sections/About.astro";
 import Education from "@sections/Education.astro";
 import Experience from "@sections/Experience.astro";
 import Projects from "@sections/Projects.astro";
+import Skills from "@sections/Skills.astro";
 import Footer from "@sections/Footer.astro";
 
 import Layout from "../layouts/Layout.astro";
@@ -10,14 +11,15 @@ import Toast from "@ui/Toast.astro";
 ---
 
 <Layout title="Portfolio PABLO LOPEZ - Software Developer">
-  <main class="p-4 mt-6 mx-auto flex flex-col gap-6 md:max-w-4xl">
+  <main class="portfolio-shell">
     <About />
-    <Education />
     <Experience />
+    <Skills />
     <Projects />
+    <Education />
   </main>
 
-  <footer class="p-4 pt-0 pb-12 mx-auto flex flex-col gap-6 md:max-w-4xl">
+  <footer class="portfolio-shell pt-0 pb-12">
     <Footer />
   </footer>
 

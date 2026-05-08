@@ -9,20 +9,20 @@ import ThemeToggle from '../components/ui/ThemeToggle.astro';
 
 const metadata = {
   description:
-    "Portfolio Pablo Lopez, Software Developer.",
+    "Portfolio Pablo Lopez, Software Developer y Cybersecurity.",
   url: " ",
   author: "Pablo Lopez",
   keywords:
     "portfolio, Software Developer, Node.js, React, Axios, NestJS, Tailwind CSS, Docker, TypeScript, JavaScript,",
   image:
-    "./public/favicon.svg",
+    "/mifoto.png",
 };
 
 const { description, author, url, keywords, image } = metadata;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
 
@@ -41,7 +41,7 @@ const { description, author, url, keywords, image } = metadata;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png+xml" href={image} />
     <meta name="generator" content={Astro.generator} />
 
@@ -54,36 +54,185 @@ const { description, author, url, keywords, image } = metadata;
 </html>
 
 <style is:global>
+  :root {
+    color-scheme: light dark;
+    --secondary-color: #2e78c7;
+    --primary-color: #dbc404;
+    --primary-color-light: #f8f9fa;
+    --primary-color-dark: #242633;
+    --background-color: #c0cef3;
+    --surface-color: #f8f9fa;
+    --text-color: #333333;
+    --muted-text-color: rgba(51, 51, 51, 0.72);
+    --border-color: #dbc404;
+  }
+
+  .dark {
+    --background-color: #16171f;
+    --surface-color: #242633;
+    --text-color: #f2f2f2;
+    --muted-text-color: rgba(242, 242, 242, 0.72);
+    --border-color: #dbc404;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-white font-mono text-red-500; /* Light mode: Fondo blanco, fuente monoespaciada y texto rojo */
+    min-height: 100dvh;
+    width: 100%;
+    overflow-x: hidden;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
-  .dark body {
-    @apply bg-black text-green-400; /* Dark mode: Fondo negro y texto verde fluorescente */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
   }
 
-  h1, h2, h3 {
-    @apply text-2xl font-semibold text-red-500;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
-  .dark h1, .dark h2, .dark h3 {
-    @apply text-green-400;
-  }
-
-  h4 {
-    @apply text-base font-semibold text-red-500;
-  }
-
-  .dark h4 {
-    @apply text-green-400;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
   }
 
   p {
-    @apply text-red-500;
+    color: var(--text-color);
+    text-wrap: pretty;
   }
 
-  .dark p {
-    @apply text-green-400;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 9vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    width: fit-content;
+    margin-top: -3rem;
+    padding: 0.5rem 1rem;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  main,
+  body > footer {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+  }
+
+  .portfolio-shell {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .portfolio-section {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    outline: 1px solid var(--border-color);
+    border-radius: 10px;
+  }
+
+  .section-title-row {
+    display: contents;
+  }
+
+  .section-title-row > svg {
+    display: none;
+  }
+
+  .surface-card {
+    background: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: 0 18px 45px rgba(15, 18, 28, 0.12);
+  }
+
+  .primary-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    width: fit-content;
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: #16171f;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .primary-action:hover {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-shell {
+      gap: 3.5rem;
+      padding: 0.75rem;
+    }
   }
 
   .animate-pulse-fade-in {
