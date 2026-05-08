@@ -22,9 +22,13 @@ const { description, author, url, keywords, image } = metadata;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.toggle("dark", savedTheme !== "light");
+    </script>
 
     <meta name="description" content={description} />
     <meta name="author" content={author} />
@@ -150,12 +154,16 @@ const { description, author, url, keywords, image } = metadata;
   }
 
   h2 {
+    position: relative;
+    z-index: 1;
     width: fit-content;
-    margin-top: -3rem;
-    padding: 0.5rem 1rem;
+    margin-top: -2.35rem;
+    margin-left: 0.45rem;
+    padding: 0 0.75rem;
     background: var(--background-color);
     color: var(--text-color);
     font-size: 1.6rem;
+    line-height: 1.2;
   }
 
   h3 {
@@ -181,12 +189,13 @@ const { description, author, url, keywords, image } = metadata;
   }
 
   .portfolio-section {
+    position: relative;
     width: 100%;
-    padding: 1rem;
+    padding: 1.75rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    outline: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
   }
 

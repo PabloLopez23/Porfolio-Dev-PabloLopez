@@ -25,7 +25,7 @@
       moonIcon.classList.toggle('is-hidden', isDark);
     };
 
-    setTheme(localStorage.getItem('theme') || 'light');
+    setTheme(localStorage.getItem('theme') || 'dark');
 
     themeToggle.addEventListener('click', () => {
       const isDark = document.documentElement.classList.contains('dark');
