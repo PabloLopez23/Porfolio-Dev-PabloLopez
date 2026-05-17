@@ -41,6 +41,6 @@ export const mockProjects: Project[] = [
     skills: ["Node.js","TypeScript","React","Redux","TailwindCSS","Responsive Web Design"],
     urlRepository: 'https://github.com/PabloLopez23/barbershop',
     urlDeploy: 'https://drive.google.com/file/d/1H1S3dTU0ZS_Fl6zovThnI_87PoGG_NbX/view?usp=sharing',
-    deployLabel: 'presentación',
+    deployLabel: 'Presentación',
   },
 ]

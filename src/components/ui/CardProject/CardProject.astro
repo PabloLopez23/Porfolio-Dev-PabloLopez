@@ -14,6 +14,8 @@ const { project } = Astro.props;
 
 const { deployLabel, description, skills, title, urlDeploy, urlImage, urlRepository } =
   project;
+
+const deployButtonLabel = deployLabel ?? "Deploy";
 ---
 
 <article class="project-card">
@@ -33,14 +35,16 @@ const { deployLabel, description, skills, title, urlDeploy, urlImage, urlReposit
       urlRepository && (
         <CardButtonLink aria-label={`Ver repositorio de ${title}`} href={urlRepository}>
           <GitHub className="size-4" />
+          <span>Repositorio</span>
         </CardButtonLink>
       )
     }
 
     {
       urlDeploy && (
-        <CardButtonLink aria-label={`Ver ${deployLabel ?? "deploy"} de ${title}`} href={urlDeploy}>
+        <CardButtonLink aria-label={`Ver ${deployButtonLabel.toLowerCase()} de ${title}`} href={urlDeploy}>
           <ExternalLink className="size-4" />
+          <span>{deployButtonLabel}</span>
         </CardButtonLink>
       )
     }
