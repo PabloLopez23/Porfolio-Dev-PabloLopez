@@ -1,9 +1,23 @@
 ---
 import { mockProjects } from "@data/projects.mock";
 
+const cybersecuritySkills = [
+  "Blue Team",
+  "Cloud Security",
+  "Cybersecurity",
+  "Pentesting",
+  "Web Security",
+  "Vulnerability Analysis",
+  "Burp Suite",
+  "Nmap",
+  "Wireshark",
+  "Linux",
+  "SIEM",
+];
+
 const skills = Array.from(
-  new Set(mockProjects.flatMap((project) => project.skills))
-).slice(0, 18);
+  new Set([...mockProjects.flatMap((project) => project.skills), ...cybersecuritySkills])
+).slice(0, 24);
 ---
 
 <section
@@ -12,7 +26,7 @@ const skills = Array.from(
 >
   <h2>Skills</h2>
 
-  <div class="carousel-container" aria-label="Tecnologias principales">
+  <div class="carousel-container" aria-label="Tecnologías principales">
     <ul class="skills-list">
       {skills.map((skill) => <li>{skill}</li>)}
       {skills.map((skill) => <li aria-hidden="true">{skill}</li>)}
