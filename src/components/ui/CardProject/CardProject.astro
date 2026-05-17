@@ -12,7 +12,7 @@ interface Props {
 
 const { project } = Astro.props;
 
-const { description, skills, title, urlDeploy, urlImage, urlRepository } =
+const { deployLabel, description, skills, title, urlDeploy, urlImage, urlRepository } =
   project;
 ---
 
@@ -39,7 +39,7 @@ const { description, skills, title, urlDeploy, urlImage, urlRepository } =
 
     {
       urlDeploy && (
-        <CardButtonLink aria-label={`Ver deploy de ${title}`} href={urlDeploy}>
+        <CardButtonLink aria-label={`Ver ${deployLabel ?? "deploy"} de ${title}`} href={urlDeploy}>
           <ExternalLink className="size-4" />
         </CardButtonLink>
       )

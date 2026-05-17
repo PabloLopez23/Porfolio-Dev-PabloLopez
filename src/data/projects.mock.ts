@@ -6,6 +6,7 @@ export interface Project {
   urlImage: string;
   urlRepository?: string;
   urlDeploy: string;
+  deployLabel?: string;
 }
 
 export const mockProjects: Project[] = [
@@ -35,10 +36,11 @@ export const mockProjects: Project[] = [
   },
   {
     title: 'BARBERSHOP',
-    description: 'En colaboración con un equipo internacional, participé en el desarrollo de una aplicación web para barbería. Nuestro objetivo fue crear una plataforma intuitiva y funcional que permitiera a los usuarios reservar citas, consultar servicios disponibles y obtener información sobre los barberos.',
+    description: 'Proyecto colaborativo desarrollado con No Country para una aplicación web de gestión de turnos para barbería. Participé en el desarrollo de vistas del frontend, integración con servicios del backend y gestión de datos para una experiencia de reserva clara y funcional.',
     urlImage: 'https://res.cloudinary.com/dxakaoudm/image/upload/v1732390027/img2_ghgatr.jpg', 
     skills: ["Node.js","TypeScript","React","Redux","TailwindCSS","Responsive Web Design"],
-    urlRepository: 'https://github.com/Heba-WebDev/barbershop',
+    urlRepository: 'https://github.com/PabloLopez23/barbershop',
     urlDeploy: 'https://drive.google.com/file/d/1H1S3dTU0ZS_Fl6zovThnI_87PoGG_NbX/view?usp=sharing',
+    deployLabel: 'presentación',
   },
 ]

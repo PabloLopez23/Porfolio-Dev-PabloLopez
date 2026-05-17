@@ -8,7 +8,7 @@ export const mockExperience: TimeLineData[] = [
     extraDetails: [
       {
         title: 'BarberShop ',
-        description: 'Simulación Laboral Tech en la que desarrollamos aplicaciones web desde cero en equipos interdisciplinarios. Como Desarrollador de Software, tuve la oportunidad de participar en la selección del proyecto, su planificación y su desarrollo.',
+        description: 'Simulación laboral tech con equipo multidisciplinario y trabajo remoto. Participé en el desarrollo de una aplicación web para gestión de turnos y servicios de barbería, colaborando en frontend, integración con backend, consumo de APIs y organización del flujo de reservas.',
         url: 'https://www.linkedin.com/feed/update/urn:li:activity:7208504650159816704/'
       }
       

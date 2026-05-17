@@ -14,6 +14,6 @@ export const mockEducation: TimeLineData[] = [
   {
     subTitle: { title: "Diploma - Enlace", url: "https://platzi.com/p/pabloexelh22/ruta/12050-beginner-core2/diploma/detalle/"},
     date: "PLATZI - 2023",
-    title: "Ingles",
+    title: "Inglés",
   },
 ];
